@@ -25,14 +25,16 @@ public class FetchUrl {
 	{this.f=f;
 		
 	}
-	
+	/* fetches issues from github using their api
+	 * */
+	 
 	public void fetchurl(String urli)
-	{
+	{ 
 		 try { 
 			 
 			 String ur=urli.split("github.com/")[1];
 			 ur="https://api.github.com/repos/"+ur+"/issues?per_page=100000&status=open";
-			 System.out.println(ur);
+			
 			 
 		 StringBuilder stringBuilder=new StringBuilder();
 	         URL url=new URL(ur);
@@ -50,7 +52,7 @@ public class FetchUrl {
                 while ((line = bufferedReader.readLine()) != null)
                     stringBuilder1.append(line);
 
-             System.out.print(stringBuilder1.toString());
+            
              calculate(stringBuilder1.toString());
 
 
@@ -74,7 +76,9 @@ public class FetchUrl {
             e.printStackTrace();
         }
 	}
-
+/*Calculate the required issues count and send result back to Fetch class
+ * */
+ 
 	private void calculate(String string) 
 	{   int totalnum=0,total24=0,total247=0,total7=0;
 	
@@ -94,7 +98,7 @@ public class FetchUrl {
 	    			   total247++;
 	    		  if(instant.compareTo(in7)<0)
 	    			   total7++;
-	    		  System.out.println(instant);
+	    		
 			    //	Date date=format.parse(js.optString("created_at"));
 			
 	    	
@@ -103,7 +107,7 @@ public class FetchUrl {
 	    	
 	    }
 	    f.publishresult(totalnum,total24, total247,total7);
-	    System.out.println("\n"+totalnum+" "+total24+" "+total247+" "+total7);
+	   
 		
 		// TODO Auto-generated method stub
 		
