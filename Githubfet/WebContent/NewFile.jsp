@@ -7,9 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="fetch" method="get">
-<input type="text" placeholder="Enter url of github" name="url"/>
-<input type="submit" /> 
+<form style=" margin:30px;"action="fetch" method="get">
+<input style="padding-left: 15px;
+              width:70%;
+              padding-top:5px;
+              
+              padding-bottom: 5px;
+              padding-right: 15px;" type="text" placeholder="Enter url of github" name="url"/>
+<input style="height:40px;margin-top:30px;width:30%;text-align: center;"type="submit" /> 
 </form>
 </body>
 </html>

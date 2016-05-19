@@ -12,6 +12,14 @@ public class Fetch extends HttpServlet implements FetchInt {
 	String url;
 	HttpServletResponse resp;
 	HttpServletRequest req;
+	
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(req, resp);
+	}
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
